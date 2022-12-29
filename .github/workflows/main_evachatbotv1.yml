@@ -30,6 +30,10 @@ jobs:
       - name: Install dependencies
         run: pip install -r requirements.txt
         
+             # We add collectstatic to take care of our static files during the Actions run
+      # This is not added by default in the generated template, so we include this ourselves
+      - name: Collect static
+        run: python manage.py collectstatic
       # Optional: Add step to run tests here (PyTest, Django test suites, etc.)
       
       - name: Upload artifact for deployment jobs
