@@ -61,7 +61,7 @@ class Chatbox {
         let msg1 = { name: "User", message: text1 }
         this.messages.push(msg1);
 
-        fetch('https://evachatbotv1.azurewebsites.net/predict', {
+        fetch('https://localhost/predict', {
             method: 'POST',
             body: JSON.stringify({ message: text1 }),
             mode: 'cors',
@@ -87,7 +87,7 @@ class Chatbox {
         console.log('option clicked',domain);
         document.querySelectorAll('.optionButton').forEach(el => el.setAttribute('disabled', true));
 
-        fetch('https://evachatbotv1.azurewebsites.net/domain', {
+        fetch('https://localhost/domain', {
             method: 'POST',
             body: JSON.stringify({ message: domain }),
             mode: 'cors',
