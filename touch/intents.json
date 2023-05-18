@@ -11,7 +11,8 @@
         "How are you doing",
         "Is anyone there?",
         "Hello",
-        "Good day"
+        "Good day",
+	"Wassup"
       ],
       "responses": [
         "Hey!",
