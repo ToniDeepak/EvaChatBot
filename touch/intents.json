@@ -12,10 +12,8 @@
         "Is anyone there?",
         "Hello",
         "Good day",
-		"Wassup",
-		"Namaskara",
-		"wassup",
-		
+	"Wassup",
+	"Namaskara"		
       ],
       "responses": [
         "Hey!",
