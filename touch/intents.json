@@ -12,13 +12,18 @@
         "Is anyone there?",
         "Hello",
         "Good day",
-	"Wassup"
+		"Wassup",
+		"Namaskara",
+		"wassup",
+		
       ],
       "responses": [
         "Hey!",
         "Hello, thanks for visiting",
         "Hi there, what can I do for you?",
-        "Hi there, how can I help?"
+        "Hi there, how can I help you?",
+		"Namaskara",
+		"I am Good, Thanks for asking"
       ]
     },
     {
@@ -40,7 +45,11 @@
       "patterns": [
         "Price not found",
         "Some lines still in 'To Invoice'",
-        "price not displayed"
+        "price not displayed",
+		"No price found",
+		"Price missing",
+		"missing price",
+		"lines in To Invoice"
       ],
       "responses": [
         "Reponse in CalculatedPrices from Comlims is empty, Please check with ComLims or Check if the request from IPW is valid"
@@ -49,8 +58,10 @@
     {
       "tag": "av failure error",
       "patterns": [
-        "AV Autovalidation",
-        "Auto Validation Failure Error"
+        "AV Autovalidation failed",
+        "Auto Validation Failure Error",
+		"AV failure",
+		"Failed AV"
       ],
       "responses": [
         "AV failure could have happened because of any of the following reasons. \nPlease check the \"Av Failure Details\" tab for exact reason."
@@ -61,7 +72,9 @@
       "patterns": [
         "Copy Original sent to DMA failed",
         "OriginalToDmaSendingFailed",
-        "CopyToDmaSendingFailed"
+        "CopyToDmaSendingFailed",
+		"CopyDma",
+		"Error in CopyToDma"
       ],
       "responses": [
         "Document already exists in DMA - Please Check in DMA, if not raise a ticket"
@@ -71,7 +84,10 @@
       "tag": "Analytical Report Missing error",
       "patterns": [
         "NoAnalyticalReportError",
-        "No Analytical Report Error"
+        "No Analytical Report Error",
+		"Analytical Report Missing",
+		"Missing anlyrical report",
+		"Error in analytical report"
       ],
       "responses": [
         "Analytical Report Data Missing, Please check with SVR Team"
@@ -108,11 +124,66 @@
 		    "ipw default printer error",
         "error ipw default print",
         "ipw default printer issue",
-        "ipw default printing issue"
+        "ipw default printing issue",
+		"default printer error",
+		"usc printing default error"
       ],
       "responses": [
         "While configuring the default printer for a user, it must be ensured that only one printer is set to isDefault = true for a workstation in Usc Printing Application"
       ]
-    }
+    },
+	{
+      "tag": "Analytical report details are missing",
+      "patterns": [
+		    "Analytical report details are missing",
+        "error Analytical report details are missing",
+        "Business Error Analytical report details are missing",
+        "Invoiceable items with Business error Analytical report details are missing"
+      ],
+      "responses": [
+        "SVR has returned analytical report details with error code ARNotValidated. Please check with SVR team"
+      ]
+    },
+	{
+      "tag": "OBII lines missing on the PDF",
+      "patterns": [
+		    "OBII lines missing on the PDF interco",
+        "OBII lines missing PDF",
+        "OBII lines missing in invoice",
+        "OBII lines not available",
+		"interco pdf OBII lines missing",
+		"OBII lines missing",
+		"missing OBII Lines"
+      ],
+      "responses": [
+        "OBII lines are not part of Interco template requirement.If not interco, please raise a ticket."
+      ]
+    },
+	{
+      "tag": "Not able to validate the Credit Note",
+      "patterns": [
+		    "User not able to validate the Credit Note",
+        "Unable to validate CN",
+		"Unable to validate Credit Note",
+		"Credit Note validation not happening",
+		"Validating credit notes failure"
+      ],
+      "responses": [
+        "Please verify if the user has the correct permission for validation."
+      ]
+    },
+	{
+      "tag": "Invoice not sent to customer",
+      "patterns": [
+		    "Email was not sent",
+        "Invoice not sent to customer",
+		"Email send failure",
+		"Customer didnt receive email"
+      ],
+      "responses": [
+        "Please verify if 'IsProductionSmtp' is set to true in the configuration. If yes and 'EmailSent' event is present , then please track the mail with the exchange team."
+      ]
+    },
+	
   ]
 }
